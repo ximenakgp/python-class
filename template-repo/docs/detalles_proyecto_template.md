@@ -21,7 +21,7 @@ Requisitos no funcionales
 - Tiempo de respuesta,capacaidad de almacenamiento,seguridad o algunas especificaciones del lenguaje de programacion, plataforma tecnologica.
 
 
-## Análisis y Diseño
+## Análisis y Diseño    
 
 Pequeña descripcion de la metodoliga para la resolucion del problema (super super pequeña). 
 
