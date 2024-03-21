@@ -1,13 +1,13 @@
-# COUNT A, C, G Y T
+# Título del proyecto
 
-Fecha: 21/03/24
+Fecha: 
 
 **Participantes / Autor**:
 
 - Nombre  <correo>
 
 ## Descripción del Problema
-Crear un programa para contar las ocurrencias de los símbolos A, C, G y T  de una cadena de ADN que lee a través de un archivo.
+
 
 ## Especificación de Requisitos
 
