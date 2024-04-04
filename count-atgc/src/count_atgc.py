@@ -1,22 +1,25 @@
 """
-NAME:Contenido de As, Ts, Gs, Cs
+NAME: 
+Contenido de As, Ts, Gs, Cs
        
-VERSION:1
+VERSION: 1
 
-AUTHOR: KARLA XIMENA GONZALEZ PLATAS
+AUTHOR: 
+KARLA XIMENA GONZALEZ PLATAS
 
-DESCRIPTION: Programa que calcula el contenido de cada nucleótido en una secuencia de DNA. 
-La secuencia viene en un archivo de texto en formato raw llamado sequence.txt. Imprimir en pantalla el resultado de los conteos.
+DESCRIPTION: 
+Programa que calcula el contenido de cada nucleótido en una secuencia de DNA. 
+La secuencia viene en un archivo de texto en formato raw llamado sequence.txt. 
+Imprimir en pantalla el resultado de los conteos.
 
 CATEGORY:
     Conteo de nucleótidos en una secuencia de DNA/Python program
 
 USAGE:
-
     % python count_atgc.py
     
-ARGUMENTS
-    Archivo: "sequence.txt" =>Contiene la secuencia de DNA que se quiere contabilizar. 
+ARGUMENTS:
+    Archivo: "sequence.txt" => Contiene la secuencia de DNA que se quiere contabilizar. 
 
 METHOD:
 -Crear o nombrar un archivo como "sequence.txt" que contenga la secuencia de DNA.
