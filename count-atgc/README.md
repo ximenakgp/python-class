@@ -1,7 +1,7 @@
 # COUNT A, C, G Y T
 
 Este es un script de Python diseñado para:
-El proyecto consiste en crear un programa en python, para contar las ocurrencias de los símbolos A, C, G y T de una secuencia de DNA que se lee a través de un archivo nombrado como "sequence.txt" sin importar si existen mayúsculas o minúsculas dentro de la secuencia. Por lo tanto, al final de la ejecución del programa se imprime la cantidad de As, Cs, Ts, y Gs que se encuentran en la cadena de DNA. 
+El proyecto consiste en crear un programa en python, para contar las ocurrencias de los símbolos A, C, G y T de una secuencia de DNA que se lee a través de un archivo nombrado como "secuencia.txt" sin importar si existen mayúsculas o minúsculas dentro de la secuencia. Por lo tanto, al final de la ejecución del programa se imprime la cantidad de As, Cs, Ts, y Gs que se encuentran en la cadena de DNA. 
 
 ## Uso
 
