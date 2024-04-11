@@ -1,6 +1,5 @@
 # COUNT As, Cs, Gs Y Ts
 
-Este es un script de Python diseñado para:
 El proyecto consiste en crear un programa en Python que cuenta las ocurrencias de los nucleótidos A, C, G y T en una secuencia de DNA proporcionada por el usuario a través de un archivo. Este programa de tipo CLI permite ingresar los nucleótidos a contar como argumentos en la línea de comandos y cuenta los nucleótidos sin importar si están en mayúsculas o minúsculas en la secuencia. Al finalizar la ejecución, el programa imprime la cantidad de As, Cs, Ts y Gs encontrados en la cadena de DNA.
 
 ## Uso
