@@ -15,10 +15,13 @@ La ejecución exitosa de estos casos de prueba asegura que el script está listo
 A continuación, presentamos los detalles de los casos de prueba. Cada caso de prueba incluye una descripción del caso de prueba, los datos de entrada utilizados y el resultado esperado.
     
     
-### Caso de prueba 1: Comprobación de ----
+### Caso de prueba 1: Validación input del usuario
 
-- Descripción: Verificar que el script puede ----
-- Datos de entrada: ----
+- Descripción: Para este caso, se le proporcionará al usuario un path incorrecto de un archivo inexistente, para observar si el programa puede manejarlo apropiadamente
+- Datos de entrada:
+```{python}
+python count-atcg the_file_does_not_exist.txt -n ACGT
+```
 - Resultado esperado: ---
 - Estado: -----
 
