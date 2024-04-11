@@ -4,30 +4,42 @@ Contenido de As, Ts, Gs, Cs
        
 VERSION: 1
 
-AUTHOR: 
-KARLA XIMENA GONZALEZ PLATAS
+AUTHOR: KARLA XIMENA GONZALEZ PLATAS
 
 DESCRIPTION: 
 Programa que calcula el contenido de cada nucleótido en una secuencia de DNA. 
-La secuencia viene en un archivo de texto en formato raw llamado sequence.txt. 
+El usuario proporciona el nombre del archivo con la secuencia de DNA y el argumento para los nucleótidos que quiere contabilizar. 
 Imprimir en pantalla el resultado de los conteos.
 
 CATEGORY:
     Conteo de nucleótidos en una secuencia de DNA/Python program
 
 USAGE:
-    % python count_atgc.py
+    % python count2_atgc.py <file> -n A C T G
+    % python count2_atgc.py <file> -n a c t g
+    % python count2_atgc.py <file> -nucleotidos A C T G
+    % python count2_atgc.py <file> -nucleotidos a c t g
+
     
 ARGUMENTS:
-    Archivo: "sequence.txt" => Contiene la secuencia de DNA que se quiere contabilizar. 
+    POSICIONAL = archivo           => Nombre del archivo que contiene la secuencia de DNA que se quiere contabilizar
+    OPCIONAL   = -n - -nucleotidos => Letras de los nucleótidos a contar (A,C, T, G ó a, c, t, g)
+
+LIBRERÍA: 
+    import argparse
 
 METHOD:
--Crear o nombrar un archivo como "sequence.txt" que contenga la secuencia de DNA.
--Abrir el archivo con la secuencia de DNA
+-Importar la librería argparse para convertir el programa a uno de tipo CLI
+-Crear el objeto ArgumentParser y añadir una descripción del programa
+-Pasar los argumentos de acuerdo a lo que usuario ingresa a la línea de comandos.
+-Parsear los argumentos
+-Abrir y cerrar el archivo que contiene la secuencia de DNA
+-Leer el contenido del archivo y almacenarlo en secuencia
+-Verificar si la secuencia está vacía o no es válida
 -Convertir la secuencia de DNA a mayúsculas para hacer el conteo sin distinción, es decir, sin 
 importar si la secuencia de DNA tiene mayúsculas u minúsculas. 
--Inicializar contadores para cada nucleótido.
--Contar el numero de nucleotidos.
+-Contar la frecuencia de los nucleótidos especificados en la línea de comandos.
+-Hacer válido el argumento nucleotidos cuando el usuario lo ingresa en minúsculas
 -Imprimir los resultados.
 """
 # ===========================================================================
@@ -35,11 +47,14 @@ importar si la secuencia de DNA tiene mayúsculas u minúsculas.
 # ===========================================================================
 
 import argparse # Importar la líbreria de argparse
+
 # Crear el objeto ArgumentParser y añadir una descripción del programa
 parser = argparse.ArgumentParser(description='Programa para contar el contenido de nucleótidos en una secuencia de DNA :)')
+
 # Pasar los argumentos
 parser.add_argument("archivo", help="Introduce el nombre del archivo con la secuencia de DNA")
 parser.add_argument("-n", "--nucleotidos", type=str, nargs="+", default=["A","C","T","G"], help="Letras de las que se desea ver la frecuencia")
+
 # Parsear los argumentos
 args = parser.parse_args()
 archivo = args.archivo
@@ -54,6 +69,7 @@ except FileNotFoundError as e:
     print("El archivo especificado no se encontró")
     print(e)
     exit(1)
+
 # Verificar si la secuencia está vacía o no es válida
 if not secuencia:
     print("El archivo está vacío o no contiene una secuencia de ADN válida")
