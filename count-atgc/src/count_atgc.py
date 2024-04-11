@@ -19,7 +19,7 @@ USAGE:
     % python count_atgc.py
     
 ARGUMENTS:
-    Archivo: "sequence.txt" => Contiene la secuencia de DNA que se quiere contabilizar. 
+    Archivo: "secuencia.txt" => Contiene la secuencia de DNA que se quiere contabilizar. 
 
 METHOD:
 -Crear o nombrar un archivo como "sequence.txt" que contenga la secuencia de DNA.
@@ -35,7 +35,7 @@ importar si la secuencia de DNA tiene mayúsculas u minúsculas.
 # ===========================================================================
 
 # Abrir el archivo con la secuencia de ADN
-with open('sequence.txt', 'r') as file:
+with open('secuencia.txt', 'r') as file:
     sequence = file.read().strip()
 
 # Convertir la secuencia a mayúsculas para contar sin distinción
