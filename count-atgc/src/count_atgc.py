@@ -15,10 +15,10 @@ CATEGORY:
     Conteo de nucleótidos en una secuencia de DNA/Python program
 
 USAGE:
-    % python count2_atgc.py <file> -n A C T G
-    % python count2_atgc.py <file> -n a c t g
-    % python count2_atgc.py <file> -nucleotidos A C T G
-    % python count2_atgc.py <file> -nucleotidos a c t g
+    % python count_atgc.py <file> -n A C T G
+    % python count_atgc.py <file> -n a c t g
+    % python count_atgc.py <file> -nucleotidos A C T G
+    % python count_atgc.py <file> -nucleotidos a c t g
 
     
 ARGUMENTS:
@@ -95,4 +95,3 @@ else:
     print(f'Número de C: {count_C}')
     print(f'Número de G: {count_G}')
     print(f'Número de T: {count_T}')
-    
