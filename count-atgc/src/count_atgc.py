@@ -52,3 +52,6 @@ print(f'Número de A: {count_A}')
 print(f'Número de C: {count_C}')
 print(f'Número de G: {count_G}')
 print(f'Número de T: {count_T}')
+
+# Version mas simple:
+print(f'Proporción de nucleotidos en la secuencia: A: {sequence.count('A')}, C: {sequence.count('C')}, G: {sequence.count('G')}, T: {sequence.count('T')}')
