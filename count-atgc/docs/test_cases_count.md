@@ -21,10 +21,10 @@ A continuación, presentamos los detalles de los casos de prueba. Cada caso de p
 
 - Datos de entrada: Nombre del archivo con la secuencia y argumento de los nucleotidos a buscar.
 ```
-python count2_atgc.py <archivo> -n A T C G
-python count2_atgc.py <archivo> -nucleotidos A T C G
-python count2_atgc.py <archivo> -n a c t g
-python count2_atgc.py <archivo> -nucleotidos a c t g
+python count_atgc.py <archivo> -n A T C G
+python count_atgc.py <archivo> -nucleotidos A T C G
+python count_atgc.py <archivo> -n a c t g
+python count_atgc.py <archivo> -nucleotidos a c t g
 
 ```
 
@@ -42,10 +42,10 @@ Número de G: 32
 
 - Datos de entrada: Nombre incorrecto del archivo con la secuencia y argumento de los nucleotidos a buscar.
 ```
-python count2_atgc.py <archio> -n A T C G
-python count2_atgc.py <arhivo> -nucleotidos A T C G
-python count2_atgc.py <archio> -n a c t g
-python count2_atgc.py <ahivo> -nucleotidos a c t g
+python count_atgc.py <archio> -n A T C G
+python count_atgc.py <arhivo> -nucleotidos A T C G
+python count_atgc.py <archio> -n a c t g
+python count_atgc.py <ahivo> -nucleotidos a c t g
 
 ```
 
@@ -58,10 +58,10 @@ python count2_atgc.py <ahivo> -nucleotidos a c t g
 - Descripción: Verificar que el script puede reconocer como argumento válido las letras A, C, T, G y a, c, t, g.
 - Datos de entrada: Nombre del archivo y argumento para los nucleótidos.
 ```
-python count2_atgc.py <archivo> -n A T C G
-python count2_atgc.py <archivo> -nucleotidos A T C G
-python count2_atgc.py <archivo> -n a c t g
-python count2_atgc.py <archivo> -nucleotidos a c t g
+python count_atgc.py <archivo> -n A T C G
+python count_atgc.py <archivo> -nucleotidos A T C G
+python count_atgc.py <archivo> -n a c t g
+python count_atgc.py <archivo> -nucleotidos a c t g
 
 ```
 
@@ -78,10 +78,10 @@ Número de G: 32
 
 - Datos de entrada: Nombre del archivo y argumento para los nucleótidos.
 ```
-python count2_atgc.py <archivo> -n A T C G
-python count2_atgc.py <archivo> -nucleotidos A T C G
-python count2_atgc.py <archivo> -n a c t g
-python count2_atgc.py <archivo> -nucleotidos a c t g
+python count_atgc.py <archivo> -n A T C G
+python count_atgc.py <archivo> -nucleotidos A T C G
+python count_atgc.py <archivo> -n a c t g
+python count_atgc.py <archivo> -nucleotidos a c t g
 
 ```
 - Resultado esperado: El archivo está vacío o no contiene una secuencia de ADN válida
@@ -94,7 +94,7 @@ python count2_atgc.py <archivo> -nucleotidos a c t g
 
 - Datos de entrada: Nombre del archivo 
 ```
-python count2_atgc.py <archivo>
+python count_atgc.py <archivo>
 ```
 - Resultado esperado: 
 Número de A: 48
