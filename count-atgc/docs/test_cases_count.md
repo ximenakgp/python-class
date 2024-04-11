@@ -17,20 +17,37 @@ A continuación, presentamos los detalles de los casos de prueba. Cada caso de p
     
 ### Caso de prueba 1: Comprobación de paso de argumentos a la línea de comandos
 
-- Descripción: Verificar que el script puede contar los nucleótidos que se encuentran en un archivo con la secuencia de DNA 
-- Datos de entrada: Nombre del archivo con la secuencia y argumento de los nucleotidos a buscar
+- Descripción: Verificar que el script puede contar los nucleótidos que se encuentran en un archivo con la secuencia de DNA.
+
+- Datos de entrada: Nombre del archivo con la secuencia y argumento de los nucleotidos a buscar.
+```
+python count2_atgc.py <archivo> -n A T C G
+python count2_atgc.py <archivo> -nucleotidos A T C G
+python count2_atgc.py <archivo> -n a c t g
+python count2_atgc.py <archivo> -nucleotidos a c t g
+
+```
+
 - Resultado esperado: 
 Número de A: 48
 Número de C: 28
 Número de T: 48
 Número de G: 32
+
 - Estado: Correcto
 
 ### Caso de prueba 2: Comprobación de error cuando el usuario pasa el archivo con un nombre incorrecto
 
 - Descripción: Verificar que el script puede detectar un error cuando el usuario pasa como argumento un nombre incorrecto del archivo que contiene la secuencia
 
-- Datos de entrada: Nombre incorrecto del archivo con la secuencia y argumento de los nucleotidos a buscar
+- Datos de entrada: Nombre incorrecto del archivo con la secuencia y argumento de los nucleotidos a buscar.
+```
+python count2_atgc.py <archio> -n A T C G
+python count2_atgc.py <arhivo> -nucleotidos A T C G
+python count2_atgc.py <archio> -n a c t g
+python count2_atgc.py <ahivo> -nucleotidos a c t g
+
+```
 
 - Resultado esperado: El archivo especificado no se encontró
 
@@ -39,7 +56,15 @@ Número de G: 32
 ### Caso de prueba 3: Comprobación de paso de argumentos que representan los nucleótidos tanto en mayúsculas como minúsculas. 
 
 - Descripción: Verificar que el script puede reconocer como argumento válido las letras A, C, T, G y a, c, t, g.
-- Datos de entrada: Nombre del archivo y argumento para los nucleótidos
+- Datos de entrada: Nombre del archivo y argumento para los nucleótidos.
+```
+python count2_atgc.py <archivo> -n A T C G
+python count2_atgc.py <archivo> -nucleotidos A T C G
+python count2_atgc.py <archivo> -n a c t g
+python count2_atgc.py <archivo> -nucleotidos a c t g
+
+```
+
 - Resultado esperado: 
 Número de A: 48
 Número de C: 28
@@ -50,16 +75,31 @@ Número de G: 32
 ### Caso de prueba 4: Comprobación de detección de error cuando el archivo con la secuencia esta vacío
 
 - Descripción: Verificar que el script puede detectar si existe una secuencia en el archivo proporcionado por el usuario. 
-- Datos de entrada: Nombre del archivo y argumento para los nucleótidos
+
+- Datos de entrada: Nombre del archivo y argumento para los nucleótidos.
+```
+python count2_atgc.py <archivo> -n A T C G
+python count2_atgc.py <archivo> -nucleotidos A T C G
+python count2_atgc.py <archivo> -n a c t g
+python count2_atgc.py <archivo> -nucleotidos a c t g
+
+```
 - Resultado esperado: El archivo está vacío o no contiene una secuencia de ADN válida
+
 - Estado: Correcto
 
 ### Caso de prueba 5: Comprobación de valores default cuando el usuario no ingresa argumentos para los nucleotidos
+
 - Descripción: Verificar que el script puede colocar valores por default cuando el usuario no ingresa los nucleótidos que quiere contar. 
+
 - Datos de entrada: Nombre del archivo 
+```
+python count2_atgc.py <archivo>
+```
 - Resultado esperado: 
 Número de A: 48
 Número de C: 28
 Número de T: 48
 Número de G: 32
+
 - Estado: Correcto
