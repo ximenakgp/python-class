@@ -28,6 +28,7 @@ Si el archivo proporcionado no existe, el script generará un mensaje de error.
 El script incluye un conjunto de pruebas unitarias. Puede ejecutar estas pruebas con:
 
 ```
+
 ```
 
 ## Datos

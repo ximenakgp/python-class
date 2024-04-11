@@ -29,8 +29,11 @@ Número de G: 32
 ### Caso de prueba 2: Comprobación de error cuando el usuario pasa el archivo con un nombre incorrecto
 
 - Descripción: Verificar que el script puede detectar un error cuando el usuario pasa como argumento un nombre incorrecto del archivo que contiene la secuencia
+
 - Datos de entrada: Nombre incorrecto del archivo con la secuencia y argumento de los nucleotidos a buscar
+
 - Resultado esperado: El archivo especificado no se encontró
+
 - Estado: Correcto
 
 ### Caso de prueba 3: Comprobación de paso de argumentos que representan los nucleótidos tanto en mayúsculas como minúsculas. 
