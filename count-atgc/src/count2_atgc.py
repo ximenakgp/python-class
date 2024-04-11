@@ -16,7 +16,7 @@ CATEGORY:
     Conteo de nucleótidos en una secuencia de DNA/Python program
 
 USAGE:
-    % python count_atgc.py
+    % python count2_atgc.py
     
 ARGUMENTS:
     Archivo: "sequence.txt" => Contiene la secuencia de DNA que se quiere contabilizar. 
