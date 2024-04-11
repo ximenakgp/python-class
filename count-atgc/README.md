@@ -27,9 +27,6 @@ Si el archivo proporcionado no existe, el script generará un mensaje de error.
 
 El script incluye un conjunto de pruebas unitarias. Puede ejecutar estas pruebas con:
 
-```
-
-```
 
 ## Datos
 El script está diseñado para operar en un archivo de texto plano, con una secuencia de letras. No hay restricciones en el número de letras en el archivo.
