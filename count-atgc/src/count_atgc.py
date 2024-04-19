@@ -1,8 +1,8 @@
 """
-NAME: 
+PROGRAM NAME: 
 Contenido de As, Ts, Gs, Cs
        
-VERSION: 1
+VERSION: 1.5
 
 AUTHOR: KARLA XIMENA GONZALEZ PLATAS
 
@@ -10,6 +10,7 @@ DESCRIPTION:
 Programa que calcula el contenido de cada nucleótido en una secuencia de DNA. 
 El usuario proporciona el nombre del archivo con la secuencia de DNA y el argumento para los nucleótidos que quiere contabilizar. 
 Imprimir en pantalla el resultado de los conteos.
+El programa considera excepciones y aplica la detección de posibles errores o bugs que pueden romper/detener la ejecución del programa.
 
 CATEGORY:
     Conteo de nucleótidos en una secuencia de DNA/Python program
@@ -31,16 +32,21 @@ LIBRERÍA:
 METHOD:
 -Importar la librería argparse para convertir el programa a uno de tipo CLI
 -Crear el objeto ArgumentParser y añadir una descripción del programa
--Pasar los argumentos de acuerdo a lo que usuario ingresa a la línea de comandos.
--Parsear los argumentos
--Abrir y cerrar el archivo que contiene la secuencia de DNA
--Leer el contenido del archivo y almacenarlo en secuencia
--Verificar si la secuencia está vacía o no es válida
+-Pasar los argumentos de acuerdo a lo que el usuario ingresa a la línea de comandos.
+-Parsear los argumentos.
+-Utilizar el bloque try y except para manejar los errores como excepciones.
+-Abrir y cerrar el archivo que contiene la secuencia de DNA.
+-Leer el contenido del archivo y almacenarlo en secuencia.
+-1°Excepción: Verificar si la secuencia está vacía o no es válida.
+-2°Excepción: Cuando el archivo no existe imprimir el error que se genera.
+-Usar else para el caso en el que no ocurra ninguna excepción.
 -Convertir la secuencia de DNA a mayúsculas para hacer el conteo sin distinción, es decir, sin 
 importar si la secuencia de DNA tiene mayúsculas u minúsculas. 
+-Imprimir un mensaje cuando exista un caracter no válido en la secuencia.
 -Contar la frecuencia de los nucleótidos especificados en la línea de comandos.
 -Hacer válido el argumento nucleotidos cuando el usuario lo ingresa en minúsculas
 -Imprimir los resultados.
+-Cerrar con una sentencia finally. 
 """
 # ===========================================================================
 # =                            main
