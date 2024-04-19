@@ -65,14 +65,14 @@ try:
     with open(archivo, 'r') as file:
         # Leer el contenido del archivo y almacenarlo en secuencia
         secuencia = file.read().strip()
+        if not secuencia: # Verificar si el archivo esta vacio
+            raise Exception("sorry, the file is empty") # Se genera una excepcion
 except FileNotFoundError as ex:
     print("sorry, couldn't find the file:", archivo)
     print("ERROR:", ex.strerror) #Imprime el error que se genera
 
-# Verificar si la secuencia está vacía o no es válida
-if not secuencia:
-    print("El archivo está vacío o no contiene una secuencia de ADN válida")
-    exit(1)
+except Exception as ex: #Imprime el mensaje en la linea de comando
+    print(ex)
 
 # Convertir la secuencia a mayúsculas para llevar a cabo el conteo
 secuencia = secuencia.upper()
