@@ -73,10 +73,12 @@ except FileNotFoundError as ex:
 
 except Exception as ex: # Imprime el mensaje en la linea de comando
     print(ex)
-    
+
 else: # Si no hay ninguna excepcion se va a ejecutar lo siguiente
 
 # Contar la frecuencia de los nucleótidos especificados en la línea de comandos
+    # Convertir la secuencia a mayúsculas para llevar a cabo el conteo
+    secuencia = secuencia.upper()
     if args.nucleotidos:
         for nucleotido in args.nucleotidos:
             # Hacer válido el argumento nucleotidos cuando el usuario lo ingresa en minúsculas
