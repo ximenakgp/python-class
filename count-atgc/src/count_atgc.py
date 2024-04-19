@@ -69,28 +69,27 @@ try:
             raise Exception("sorry, the file is empty") # Se genera una excepcion
 except FileNotFoundError as ex:
     print("sorry, couldn't find the file:", archivo)
-    print("ERROR:", ex.strerror) #Imprime el error que se genera
+    print("ERROR:", ex.strerror) # Imprime el error que se genera
 
-except Exception as ex: #Imprime el mensaje en la linea de comando
+except Exception as ex: # Imprime el mensaje en la linea de comando
     print(ex)
-
-# Convertir la secuencia a mayúsculas para llevar a cabo el conteo
-secuencia = secuencia.upper()
+    
+else: # Si no hay ninguna excepcion se va a ejecutar lo siguiente
 
 # Contar la frecuencia de los nucleótidos especificados en la línea de comandos
-if args.nucleotidos:
-    for nucleotido in args.nucleotidos:
-        # Hacer válido el argumento nucleotidos cuando el usuario lo ingresa en minúsculas
-        nucleotido = nucleotido.upper()
-        count = secuencia.count(nucleotido)
-        print(f'Número de {nucleotido}: {count}')
-else:
-    count_A = secuencia.count('A')
-    count_C = secuencia.count('C')
-    count_G = secuencia.count('G')
-    count_T = secuencia.count('T')
-    # Imprimir la frecuencia de los nucleótidos
-    print(f'Número de A: {count_A}')
-    print(f'Número de C: {count_C}')
-    print(f'Número de G: {count_G}')
-    print(f'Número de T: {count_T}')
+    if args.nucleotidos:
+        for nucleotido in args.nucleotidos:
+            # Hacer válido el argumento nucleotidos cuando el usuario lo ingresa en minúsculas
+            nucleotido = nucleotido.upper()
+            count = secuencia.count(nucleotido)
+            print(f'Número de {nucleotido}: {count}')
+    else:
+        count_A = secuencia.count('A')
+        count_C = secuencia.count('C')
+        count_G = secuencia.count('G')
+        count_T = secuencia.count('T')
+        # Imprimir la frecuencia de los nucleótidos
+        print(f'Número de A: {count_A}')
+        print(f'Número de C: {count_C}')
+        print(f'Número de G: {count_G}')
+        print(f'Número de T: {count_T}')
