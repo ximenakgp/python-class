@@ -62,8 +62,9 @@ nucleotidos = args.nucleotidos
 
 # Abrir y cerrar el archivo que contiene la secuencia de DNA
 try:
-    with open(archivo, 'r') as file:
+    with open(archivo, 'r') as file: # r se utiliza para abrir el archivo en modo lectura
         # Leer el contenido del archivo y almacenarlo en secuencia
+        # strip borra espacios al inicio y al final de la cadena
         secuencia = file.read().strip()
         if not secuencia: # Verificar si el archivo esta vacio
             raise Exception("sorry, the file is empty") # Se genera una excepcion
@@ -83,8 +84,11 @@ else: # Si no hay ninguna excepcion se va a ejecutar lo siguiente
         for nucleotido in args.nucleotidos:
             # Hacer válido el argumento nucleotidos cuando el usuario lo ingresa en minúsculas
             nucleotido = nucleotido.upper()
-            count = secuencia.count(nucleotido)
-            print(f'Número de {nucleotido}: {count}')
+            if nucleotido not in ["A","C","T","G"]: # Cuando existe un caracter no valido en la secuencia
+                print(f"Sequence contains '{nucleotido}', it is invalid character")
+            else:
+                count = secuencia.count(nucleotido)
+                print(f'Número de {nucleotido}: {count}')
     else:
         count_A = secuencia.count('A')
         count_C = secuencia.count('C')
