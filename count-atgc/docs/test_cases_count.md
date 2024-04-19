@@ -6,7 +6,7 @@ Los casos de prueba se han diseñado teniendo en cuenta las diferentes funcional
 
 El script está diseñado para contar las ocurrencias de los símbolos A, C, G y T de una secuencia de DNA que se lee a través de un archivo proporcionado por el usuario en la línea de comandos; de modo que el programa recibe dos argumentos: el primero de ellos es el nombre del archivo y el segundo los nucleótidos específicos que se quieren contar de la secuencia, sin importar si existen mayúsculas o minúsculas dentro de esta. Por lo tanto, al final de la ejecución del programa se imprime la cantidad de As, Cs, Ts, y Gs que se encuentran en la cadena de DNA.
 
-Además, el script está diseñado para manejar errores, uno de estos, es cuando el usuario pasa como argumento un nombre incorrecto del archivo que contiene la secuencia o cuando el archivo con la secuencia del DNA esta vacía. Así como también cuando el usuario no ingresa ningún argumento para nucleótidos, por lo que se ponen valores por default y se calculan las frecuencias de todos los nucleótidos o cuando el argumento que ingresan son letras minúsculas, es decir a, c, t o g. 
+Además, el script está diseñado para manejar errores, uno de estos, es cuando el usuario pasa como argumento un nombre incorrecto del archivo que contiene la secuencia o cuando el archivo con la secuencia del DNA esta vacía. Así como también cuando el usuario no ingresa ningún argumento para nucleótidos, por lo que se ponen valores por default y se calculan las frecuencias de todos los nucleótidos o cuando el argumento que ingresan son letras minúsculas, es decir a, c, t o g. Otra de las excepciones que considera el programa es cuando el usuario ingresa un carácter no válido para el argumento nucleótidos y este no se encuentra en la secuencia, de tal manera que el programa imprime un mensaje de error.  
 
 Los casos de prueba cubren las características clave del programa y prueban varias condiciones para garantizar la robustez y fiabilidad del script.
 
@@ -25,6 +25,7 @@ python count_atgc.py <archivo> -n A T C G
 python count_atgc.py <archivo> -nucleotidos A T C G
 python count_atgc.py <archivo> -n a c t g
 python count_atgc.py <archivo> -nucleotidos a c t g
+python count_atgc.py <archivo>
 
 ```
 
@@ -36,9 +37,9 @@ Número de G: 32
 
 - Estado: Correcto
 
-### Caso de prueba 2: Comprobación de error cuando el usuario pasa el archivo con un nombre incorrecto
+### Caso de prueba 2 (Excepción): Comprobación de error cuando el usuario pasa el archivo con un nombre incorrecto
 
-- Descripción: Verificar que el script puede detectar un error cuando el usuario pasa como argumento un nombre incorrecto del archivo que contiene la secuencia
+- Descripción: Verificar que el script puede detectar un error cuando el usuario pasa como argumento un nombre incorrecto del archivo que contiene la secuencia. El error detectado se marca como excepción y se imprime el mensaje correspondiente. 
 
 - Datos de entrada: Nombre incorrecto del archivo con la secuencia y argumento de los nucleotidos a buscar.
 ```
@@ -46,16 +47,21 @@ python count_atgc.py <archio> -n A T C G
 python count_atgc.py <arhivo> -nucleotidos A T C G
 python count_atgc.py <archio> -n a c t g
 python count_atgc.py <ahivo> -nucleotidos a c t g
-
+python count_atgc.py <arh>
 ```
 
-- Resultado esperado: El archivo especificado no se encontró
+- Resultado esperado: 
+
+sorry, couldn't find the file: secuenca.txt
+ERROR: No such file or directory
+:)
 
 - Estado: Correcto
 
 ### Caso de prueba 3: Comprobación de paso de argumentos que representan los nucleótidos tanto en mayúsculas como minúsculas. 
 
 - Descripción: Verificar que el script puede reconocer como argumento válido las letras A, C, T, G y a, c, t, g.
+
 - Datos de entrada: Nombre del archivo y argumento para los nucleótidos.
 ```
 python count_atgc.py <archivo> -n A T C G
@@ -70,9 +76,10 @@ Número de A: 48
 Número de C: 28
 Número de T: 48
 Número de G: 32
+
 - Estado: Correcto
 
-### Caso de prueba 4: Comprobación de detección de error cuando el archivo con la secuencia esta vacío
+### Caso de prueba 4 (Excepción): Comprobación de detección de error cuando el archivo con la secuencia esta vacío
 
 - Descripción: Verificar que el script puede detectar si existe una secuencia en el archivo proporcionado por el usuario. 
 
@@ -82,9 +89,13 @@ python count_atgc.py <archivo> -n A T C G
 python count_atgc.py <archivo> -nucleotidos A T C G
 python count_atgc.py <archivo> -n a c t g
 python count_atgc.py <archivo> -nucleotidos a c t g
+python count_atgc.py <archivo>
 
 ```
-- Resultado esperado: El archivo está vacío o no contiene una secuencia de ADN válida
+- Resultado esperado: 
+
+sorry, the file is empty
+:)
 
 - Estado: Correcto
 
@@ -101,5 +112,23 @@ Número de A: 48
 Número de C: 28
 Número de T: 48
 Número de G: 32
+
+- Estado: Correcto
+
+### Caso de prueba 6 (Excepción): Comprobación de que el programa no acepta ningun otro carácter que no sean letras ATGC. 
+
+- Descripción: Comprobación de que el programa no acepta ningun otro carácter que no sean letras ATGC, en caso de que el usuario ingresé un carácter inválido para el argumento nucleotidos el programa imprime un mensaje de advertencia. 
+
+- Datos de entrada: Nombre del archivo, carácter inválido
+
+```
+python count_atgc.py <archivo> -n N K Y
+```
+- Resultado esperado: 
+
+Sequence contains 'N', it is invalid character
+Sequence contains 'K', it is invalid character
+Sequence contains 'Y', it is invalid character
+:)
 
 - Estado: Correcto
