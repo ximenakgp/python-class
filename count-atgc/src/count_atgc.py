@@ -65,10 +65,9 @@ try:
     with open(archivo, 'r') as file:
         # Leer el contenido del archivo y almacenarlo en secuencia
         secuencia = file.read().strip()
-except FileNotFoundError as e:
-    print("El archivo especificado no se encontró")
-    print(e)
-    exit(1)
+except FileNotFoundError as ex:
+    print("sorry, couldn't find the file:", archivo)
+    print("ERROR:", ex.strerror) #Imprime el error que se genera
 
 # Verificar si la secuencia está vacía o no es válida
 if not secuencia:
