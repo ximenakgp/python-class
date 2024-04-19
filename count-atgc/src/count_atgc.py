@@ -95,3 +95,5 @@ else: # Si no hay ninguna excepcion se va a ejecutar lo siguiente
         print(f'Número de C: {count_C}')
         print(f'Número de G: {count_G}')
         print(f'Número de T: {count_T}')
+finally: # Se ejecuta al final
+    print(":)")
