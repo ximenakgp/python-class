@@ -47,5 +47,6 @@ def calculate_at_content(sequence, normalize=True):
 
 if __name__ == "__main__":
     # Prueba de funcionalidad.
+    # Esto es mas manual y el assert es mas automatico 
     test_sequence = "ACTGNAT"
     print(f"Contenido de AT en la secuencia de prueba: {calculate_at_content(test_sequence, normalize=True)}%")
