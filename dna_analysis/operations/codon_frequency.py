@@ -45,7 +45,7 @@ def codon_frecuencia(secuencia):
 if __name__ == "__main__":
 # Bloques de prueba para demostrar la funcionalidad del módulo.
     # Declaracion de variable para prueba del modulo
-    dna_sequence = "AUGATG"
+    dna_sequence = "AUGATCCCG"
     codon_frequencies = codon_frecuencia(dna_sequence)  # Calcula la frecuencia de cada codón en la secuencia de ADN
 
     # Imprimir las frecuencias de los codones
