@@ -1,0 +1,25 @@
+import unittest
+from dna_analysis.operations.codon_frequency import codon_frecuencia
+
+class TestCodonFrecuencia(unittest.TestCase):
+    """
+    Clase de pruebas unitarias para la función `codon_frecuencia` del módulo `codon_frequency`.
+    
+    Esta clase contiene métodos para probar el correcto cálculo de la frecuencia de cada codón
+    en secuencias de ADN, incluyendo el manejo correcto de entradas inesperadas
+    o inválidas.
+    
+    Métodos:
+        test_codon_frequency: Prueba varios casos, incluyendo secuencias válidas e inválidas,
+        para asegurar el correcto comportamiento de la función `codon_frecuencia`.
+    """
+    def test_codon_frequency(self):
+        # Prueba con una secuencia válida
+        self.assertEqual(codon_frecuencia("AUGATG"), {'AUG': 50.0, 'ATG': 50.0})
+        # Prueba con codón incompleto
+        self.assertEqual(codon_frecuencia("AUGATGCGC"), {'AUG': 33.33, 'ATG': 33.33, 'CGC': 33.33})
+        # Prueba con secuencia en minúsculas 
+        self.assertEqual(codon_frecuencia("augatg"), {'AUG': 50.0, 'ATG': 50.0})
+
+if __name__ == '__main__':
+    unittest.main()

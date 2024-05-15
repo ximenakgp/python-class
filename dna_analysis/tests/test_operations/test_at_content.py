@@ -18,8 +18,6 @@ class TestATContent(unittest.TestCase):
         self.assertEqual(calculate_at_content("ATGC"), 50.0)
         self.assertEqual(calculate_at_content("AAAA"), 100.0)
         self.assertEqual(calculate_at_content("TGAAC", normalize=False), 60.0)
-        #self.assertRaises(ValueError, calculate_at_content, "")
-        #self.assertRaises(ValueError, calculate_at_content, "XYZ")
 
 if __name__ == '__main__':
     unittest.main()
