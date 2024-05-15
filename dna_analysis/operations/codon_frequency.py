@@ -28,7 +28,7 @@ def codon_frecuencia(secuencia):
         raise ValueError("La secuencia proporcionada está vacía.")
     
     secuencia = secuencia.upper()
-    if any(c not in 'ACGTN' for c in secuencia):
+    if any(c not in 'ACGUTN' for c in secuencia):
         raise ValueError("La secuencia contiene caracteres no válidos.")
     
     codon_count = defaultdict(int) # Crear un diccionario con valores enteros

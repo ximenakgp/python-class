@@ -30,6 +30,26 @@ pseudocogido simple que ilustre la logica basica del script:
 from collections import defaultdict  # Importa la clase defaultdict desde el módulo collections
 
 def codon_frecuencia(secuencia):
+    """
+    Calcula la frecuencia de todos los codones en una secuencia de DNA
+
+    Args:
+        secuencia (str): secuencia de DNA a analizar
+    
+    Returns:
+        codon_frecuencias: frecuencia de cada codón redondeada a 2 decimales
+    
+    Raises: 
+        ValueError: Si la secuencia está vacía o contiene caracteres no válidos
+    """
+    # Validación básica de la secuencia
+    if not secuencia:
+        raise ValueError("La secuencia proporcionada está vacía.")
+    
+    secuencia = secuencia.upper()
+    if any(c not in 'ACGUTN' for c in secuencia):
+        raise ValueError("La secuencia contiene caracteres no válidos.")
+    
     codon_count = defaultdict(int) # Crear un diccionario con valores enteros
     total_codons = 0 # Inicializar el contador 
     for i in range(0,len(secuencia), 3): # Iterar sobre la secuencia de 3 en 3 para obtener cada codon
@@ -77,4 +97,6 @@ El formato de los datos de entrada.
 
 - **Flujos alternativos**:
 	- Casos especiales en el programa:
-        - La función asegura que el codon que se esta contando tiene una longitud de 3 nucleotidos
+        - La función asegura que el codón que se está contando tiene una longitud de 3 nucleótidos
+        - Se consideran excepciones: 
+            - Cuando la secuencia está vacía o contiene caracteres inválidos
