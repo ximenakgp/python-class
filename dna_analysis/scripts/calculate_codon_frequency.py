@@ -10,7 +10,6 @@ Uso:
 
 Argumentos:
     <path_to_dna_file> : Ruta al archivo de texto que contiene la secuencia de ADN.
-    --normalize        : Opción para normalizar el contenido de AT excluyendo 'N's del c
 """
 
 import argparse
