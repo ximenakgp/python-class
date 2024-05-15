@@ -6,7 +6,7 @@ en esa secuencia. La secuencia de ADN debe estar en un archivo de texto y solo
 contener los caracteres 'A', 'C', 'G', 'T', o 'N' (este último representa cualquier nucleótido). 
 
 Uso:
-    python calculate_codon_frequency.py <path_to_dna_file> [--normalize]
+    python calculate_codon_frequency.py <path_to_dna_file> 
 
 Argumentos:
     <path_to_dna_file> : Ruta al archivo de texto que contiene la secuencia de ADN.
