@@ -62,9 +62,9 @@ def write_dna_sequence(filename, sequence):
     with open(filename, 'w') as file:
         file.write(sequence + '\n')
 
+
 if __name__ == "__main__":
     # Bloques de prueba para demostrar la funcionalidad del módulo.
-    
     # Suponiendo que el archivo "example_dna.txt" contiene la secuencia válida "ATCG"
     try:
         sequence = read_dna_sequence("example_dna.txt")

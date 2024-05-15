@@ -22,10 +22,12 @@ def codon_frecuencia(secuencia):
     codon_frecuencias = {codon: round((count / total_codons) * 100, 2) for codon, count in codon_count.items()} # Calcular la frecuencia de cada codon en porcentaje con 2 decimales
     return codon_frecuencias # Regresa la frecuencia de codones
 
-# Declaracion de variable para prueba del modulo
-dna_sequence = "AUGAAAGGTGUGAATATGATGATGATGATGATG"
-codon_frequencies = codon_frecuencia(dna_sequence)  # Calcula la frecuencia de cada codón en la secuencia de ADN
+if __name__ == "__main__":
+# Bloques de prueba para demostrar la funcionalidad del módulo.
+    # Declaracion de variable para prueba del modulo
+    dna_sequence = "AUGAAAGGTGUGAATATGATGATGATGATGATG"
+    codon_frequencies = codon_frecuencia(dna_sequence)  # Calcula la frecuencia de cada codón en la secuencia de ADN
 
-# Imprimir las frecuencias de los codones
-for codon, frecuencia in codon_frequencies.items():
-    print('Codon:{}, Frecuencia:{:.2f}%'.format(codon, frecuencia))
+    # Imprimir las frecuencias de los codones
+    for codon, frecuencia in codon_frequencies.items():
+        print('Codon:{}, Frecuencia:{:.2f}%'.format(codon, frecuencia))
