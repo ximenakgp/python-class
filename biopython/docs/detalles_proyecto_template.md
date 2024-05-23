@@ -1,10 +1,11 @@
 # Título del proyecto
+Programacion orientada a objetos
 
-Fecha: 
+Fecha: 23/05/2024
 
 **Participantes / Autor**:
 
-- Nombre  <correo>
+- Karla Ximena Gonzalez Platas  <ximenagp@lcg.unam.mx>
 
 ## Descripción del Problema
 
