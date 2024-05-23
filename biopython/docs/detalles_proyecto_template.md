@@ -8,7 +8,10 @@ Fecha: 23/05/2024
 - Karla Ximena Gonzalez Platas  <ximenagp@lcg.unam.mx>
 
 ## Descripción del Problema
-
+El programa crea una superclase llamada animal, despues genera otras dos clases, perro y gato.
+Ambas clases van a hacer un override del metodo haz_ruido() con sus respectivos sonidos (guauguauu, miaumiaaauu).
+En la clase gato se agrega el atributo "usa_arenero". 
+Al final, se crean 2 objetos, un perro y un gato con los cuales se llaman a sus respectivas funciones y a 'dict'
 
 ## Especificación de Requisitos
 
