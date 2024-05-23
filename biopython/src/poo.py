@@ -1,6 +1,7 @@
 '''
 NAME: 
     Programacion Orientada a Objetos: Creacion de superclase y clase
+    
 VERSION:
     1
     
