@@ -35,19 +35,22 @@ from Bio.SeqRecord import SeqRecord # Modulo para crear registros de secuencias 
 # =                            Functions
 # ===========================================================================
 
+
 def extraer_codones(secuencia, marco):
     """
-    Extrae los codones de una secuencia de ADN en un marco de lectura especifico.
+    Extrae los codones de una secuencia de ADN en un marco de lectura especifico y los devuelve separados por espacio.
 
     Parametros:
         secuencia (str): La secuencia de ADN de la cual se extraen los codones.
         marco (int): El marco de lectura en el cual se extraen los codones.
 
     Return:
-        List[str]: Una lista de cadenas, donde cada cadena representa un codon de 3 nucleotidos.
+        str: Una cadena donde los codones estan separados por espacio.
     """
     # Lista de comprension para extraer codones de la secuencia en el marco dado
-    return [secuencia[i:i+3] for i in range(marco, len(secuencia), 3) if len(secuencia[i:i+3]) == 3]
+    codones = [secuencia[i:i+3] for i in range(marco, len(secuencia), 3) if len(secuencia[i:i+3]) == 3]
+    return ' '.join(codones)  # Une los codones separados por espacio en una sola cadena
+
 
 def crear_registro_secuencia(id_sec, codones, marco, es_reversa):
     """
@@ -113,8 +116,8 @@ def procesar_secuencia(id_sec, secuencia, directorio_salida=""):
 
 def principal():
 
-    nombre_archivo_entrada = 'input.fasta' # Definir archivo de entrada
-    directorio_salida = ''  # Especifica el directorio de salida y lo define como vacio por defecto
+    nombre_archivo_entrada = 'seq.nt.fa'  # Especifica el nombre del archivo FASTA que se va a procesar
+    directorio_salida = 'results/'  # Directorio de salida deseado
     secuencias = SeqIO.to_dict(SeqIO.parse(nombre_archivo_entrada, "fasta")) # Lee el archivo FASTA y convierte el generador de secuencias en un diccionario.
     
     for id_sec, registro in secuencias.items(): # Itera sobre cada secuencia en el archivo
