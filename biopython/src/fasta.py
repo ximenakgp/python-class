@@ -1,6 +1,6 @@
 '''
 NAME: 
-    Programacion Orientada a Objetos: 
+    Trabajando con un archivo FASTA
     
 VERSION:
     1
@@ -9,17 +9,30 @@ AUTHOR:
     Karla Ximena Gonzalez Platas
 
 DESCRIPTION:
+
+El programa procesa un archivo en formato FASTA llamado 'seq.nt.fa' que contiene secuencias de ADN. 
+Para cada secuencia en el archivo, se extraen los codones en los seis marcos de lectura (tres en 
+direccion directa y tres en direccion inversa) y se escriben los resultados en archivos FASTA separados 
+para cada marco y direccion de lectura, el nombre de estos archivos lleva esta estructura: 
+seq_1_Frame_1_Directa.fasta
+
+El proceso de calculo de codones se realiza mediante una funcion que se llama seis veces para cada 
+secuencia del archivo, una vez por cada marco de lectura.
     
 CATEGORY:
-        
+        Biopython: Secuencias y Formatos
 
 USAGE:
         % python fasta.py
     
-ARGUMENTS:
-    
-
 METHOD:
+
+El codigo utiliza la biblioteca Biopython para manipular secuencias de ADN y archivos en formato FASTA. 
+Se definen varias funciones que realizan tareas especificas como extraer codones, crear registros de 
+secuencia, escribir en archivos FASTA y procesar secuencias en diferentes marcos de lectura y en dos 
+direcciones (directa y reversa).
+El programa principal lee el archivo FASTA especificado 'seq.nt.fa' y procesa cada secuencia en los seis 
+marcos de lectura y direcciones, guardando los resultados en el directorio 'results/'.
     
 '''
 # ===========================================================================
